@@ -3,15 +3,10 @@ import flixel.FlxG;
 import flixel.addons.nape.FlxNapeSprite;
 
 class Asteroid extends FlxNapeSprite {
-	public static var CBODYAsteroid:CbType;
+	public static var CBODYAsteroid:CbType = new CbType();
 
 	public function new() {
 		super();
-
-		// adding CBODY
-		CBODYAsteroid = new CbType();
-		body.cbTypes.add(CBODYAsteroid);
-		body.userData.data = this;
 
 		// smooth rotations, bad performance
 		antialiasing = true;        
@@ -24,6 +19,9 @@ class Asteroid extends FlxNapeSprite {
 		loadGraphic("assets/images/Asteroids/Asteroid_Small.png");
 		
 		createCircularBody(10);
+		// adding CBODY
+		body.cbTypes.add(CBODYAsteroid);
+		body.userData.data = this;
 		setBodyMaterial(1, 0.2, 0.4, 3, 0.001);
 		body.velocity.setxy(_xVel, _yVel);
 		
