@@ -5,6 +5,8 @@ import flixel.addons.nape.FlxNapeSprite;
 class Asteroid extends FlxNapeSprite {
 	public static var CBODYAsteroid:CbType = new CbType();
 
+	public var secret = 10;
+
 	public function new() {
 		super();
 

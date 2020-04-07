@@ -36,8 +36,10 @@ class PlayState extends FlxState {
 	}
 
 	public function CollAsteroidToAsteroid(i:InteractionCallback) {
-		// this never gets printed and I can't understand why
 		trace("Asteroid collided");
+
+		var castAsteroid = i.int1.castBody.userData.data;
+		trace("Secret: "+castAsteroid.secret);
 	}
 
 	override public function update(elapsed:Float):Void {
