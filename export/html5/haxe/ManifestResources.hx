@@ -49,8 +49,6 @@ import sys.FileSystem;
 
 		}
 
-		Assets.defaultRootPath = rootPath;
-
 		#if (openfl && !flash && !display)
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
